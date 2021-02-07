@@ -12,3 +12,14 @@ class (a)
 a = 5L
 class (a)
 a = 5.62L
+
+a <- 8
+7 -> b
+a
+b
+a + b
+
+a <- 5:20
+a
+a <- 1:20
+a
