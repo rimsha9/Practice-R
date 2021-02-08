@@ -87,3 +87,12 @@ is.nan(x)
 x<-c(1,2,3,NA,NaN,10,5,NaN)
 is.nan(x)
 is.na(x)
+
+
+x<- data.frame(day=1:4 , rain=c(T,T,F,F))
+x
+nrow(x)
+row.names(x)<-c("A","B","C","D")
+x
+x<-list(a=1,b=2,c=3)
+x
