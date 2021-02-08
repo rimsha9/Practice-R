@@ -79,3 +79,11 @@ x <- factor(c("Mon","Tue","Wed","Thu","Fri","Sat","Sun"))
 levels= c("Sun","Mon","Tue","Wed","Thu","Fri","Sat")
 x
 levels(x)
+
+
+x<-c(1,2,NA,10,3)
+is.na(x)
+is.nan(x)
+x<-c(1,2,3,NA,NaN,10,5,NaN)
+is.nan(x)
+is.na(x)
