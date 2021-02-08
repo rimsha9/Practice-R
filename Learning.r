@@ -55,3 +55,27 @@ y <- 10:12
 cbind (x , y)
 m
 rbind (x , y)
+
+
+x <- c(1,2,"3",54)
+x
+x <- list(1,"2",TRUE,1.6,1.0i)
+x
+
+
+x<- factor (c("yes","yes","no","yes","no"))
+x
+x <- factor(c("punjab","kpk","sindh","kpk"))
+x
+table(x)
+unclass(x)
+
+
+
+x <- factor(c("Mon","Tue","Wed","Thu","Fri","Sat","Sun"))
+table(x)
+levels(x)
+x <- factor(c("Mon","Tue","Wed","Thu","Fri","Sat","Sun"))
+levels= c("Sun","Mon","Tue","Wed","Thu","Fri","Sat")
+x
+levels(x)
