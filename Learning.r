@@ -156,3 +156,10 @@ y<- c("a","b",NA,"c",NA,"d")
 good<-complete.cases(x,y)
 x[good]
 y[good]
+
+
+
+x <- factor(c("WED","THU","SUN","MON","FRI","SAT","TUE"), levels= c("SUN","MON","TUE","WED","THU","FRI","SAT"))
+#correction in arranging in levels
+
+x
