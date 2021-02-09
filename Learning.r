@@ -96,3 +96,63 @@ row.names(x)<-c("A","B","C","D")
 x
 x<-list(a=1,b=2,c=3)
 x
+
+
+
+x <- c("a","b","c","c","d","a")
+x[1]
+x[1:4]
+x[x>"a"]
+u<-x>"b"
+u
+u<-x>"a"
+u
+x[u]
+x
+
+
+x<- matrix(1:6,2,3)
+x
+x[1,2]
+x[2,2]
+x[ ,2]
+x[1, ]
+
+
+x[1, , drop=FALSE]
+x[1,3, drop=FALSE]
+
+
+x<- list(weekday=1:4 , rainprob=0.6)
+x[1]
+x
+x[[1]]
+
+
+x<- list(weekday=1:4 , rainprob=0.6 , item="umbrella")
+x[c(1,3)]
+x[[c(2)]]
+x[[c(1,3)]]
+name<-"weekday"
+x[[name]]
+x[name]
+x$name
+x$weekday
+
+
+
+x<-list(a=list(10,12,14), b=c(3.14,2.01))
+x[1]
+x[[1]]
+x[[c(1,3)]]
+x[[c(2,1)]]
+
+
+
+x<- c(1,2,NA,4,NA,5)
+bad<- is.na(x)
+x[!bad]
+y<- c("a","b",NA,"c",NA,"d")
+good<-complete.cases(x,y)
+x[good]
+y[good]
