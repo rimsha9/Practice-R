@@ -163,3 +163,40 @@ x <- factor(c("WED","THU","SUN","MON","FRI","SAT","TUE"), levels= c("SUN","MON",
 #correction in arranging in levels
 
 x
+
+
+x<- function(a=78,b=1,c=NULL)
+{
+  print(a)
+  print(b)
+  print(c)
+}
+x(40)
+
+
+x<- 1:4; y<- 6:9
+print(x)
+print(y)
+x+y
+x>2
+x>=2
+y==8
+x*y
+x/y
+x<- 1:5; y<-6:9
+x/y
+5/6        #perform in cycle form
+
+
+
+x<- matrix(1:4,2,2); y<- matrix(rep(10,4),2,2)
+x
+y
+x*y
+x%*%y
+#matix form
+
+
+x<- as.POSIXct("2012-10-25 01:00:00")
+y<- as.POSIXct("2012-10-25 06:00:00", tz="GMT")
+x-y
