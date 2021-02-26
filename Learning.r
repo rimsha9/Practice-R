@@ -200,3 +200,47 @@ x%*%y
 x<- as.POSIXct("2012-10-25 01:00:00")
 y<- as.POSIXct("2012-10-25 06:00:00", tz="GMT")
 x-y
+
+
+x<- list(1:4,rnom=10)
+lapply(x,mean)
+lapply(x,sd)
+
+
+x<- list (a=1:4,b=rnorm(10),c=rnorm(20,1),d=rnorm(100,5))
+lapply(x,mean)
+sapply(x,mean)
+
+
+x<- matrix(rnorm(200), 20,10)
+x
+apply(x,1,mean)
+apply(x,2,mean)
+apply(x,2,sum)
+rowSums(x)
+apply(x,1,quantile)
+apply(x,1,quantile,probs=c(0.25,0.75))
+
+
+
+#gl create factors
+x<- c(rnorm(10),runif(10),rnorm(10,1))
+f<-gl(3,10)
+tapply(x,f,mean, simplify = FALSE)
+split(x,f)
+lapply(split(x,f), mean)
+
+
+library(datasets)
+head(airquality)
+
+s<- split(airquality,airquality$Month)
+s
+head(s)
+s$`5`
+head(s$`5`)
+table(airquality$Month)
+
+lapply(s,function(x) colSums(x[,c("Ozone","Solar.R","Wind")]))
+sapply(s,function(x) colMeans(x[,c("Ozone","Solar.R","Wind")]))       
+sapply(s,function(x) colMeans(x[,c("Ozone","Solar.R","Wind")],na.rm = TRUE))      
